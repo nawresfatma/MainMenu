@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MainMenu</string>
+    <string-array name="event">
+        <item>Festival d art des lumiéres</item>
+        <item>Hand crafting workshop</item>
+    </string-array>
+    <string-array name="location">
+        <item>cite de la culture</item>
+        <item>Medina de Tunis</item>
+    </string-array>
+    <string-array name="price">
+        <item>Free</item>
+        <item>15 dinars</item>
+    </string-array>
+
+</resources>
