@@ -6,17 +6,12 @@ import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainMenu extends AppCompatActivity implements
-        myAdapterrecy.OnNoteListener
-        {
-
-            private static final String TAG = "NotesListActivity";
+public class MainMenu extends AppCompatActivity {
 
     RecyclerView recycler3;
     private SnapHelper snapHelper;
@@ -38,21 +33,11 @@ public class MainMenu extends AppCompatActivity implements
         s7=getResources().getStringArray(R.array.price);
 
 
-        myAdapterrecy myAdapt=new myAdapterrecy(s5,s6,s7,images,this);
+        myAdapterrecy myAdapt=new myAdapterrecy(this,s5,s6,s7,images);
         recycler3.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         ScaleCenterItemManager scaleCenterItemManager= new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);
         recycler3.setLayoutManager(new LinearLayoutManager(this));
         recycler3.setLayoutManager(scaleCenterItemManager);
         snapHelper.attachToRecyclerView(recycler3);
-     }
-    @Override
-    public void onNoteClick(int position) {
-        Intent intent = new Intent(this, eventActivity.class);
-        intent.putExtra("selected_note", s5.get(position));
-        intent.putExtra("selected_note", s6.get(position));
-
-        startActivity(intent);
-    }
-
-}
+}}
