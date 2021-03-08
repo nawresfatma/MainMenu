@@ -6,11 +6,7 @@ import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +16,6 @@ public class MainMenu extends AppCompatActivity {
     RecyclerView recycler3;
     private SnapHelper snapHelper;
     String s5[] , s6[],s7[];
-    ImageView achivements ;
-    TextView Achivements;
     int images[]={R.drawable.event,R.drawable.shop};
 
 
@@ -29,8 +23,8 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        achivements=findViewById(R.id.Achivements);
-        Achivements=findViewById(R.id.Achivements1);
+
+
         recycler3=findViewById(R.id.recyclerView);
 
 
@@ -46,29 +40,4 @@ public class MainMenu extends AppCompatActivity {
         recycler3.setLayoutManager(new LinearLayoutManager(this));
         recycler3.setLayoutManager(scaleCenterItemManager);
         snapHelper.attachToRecyclerView(recycler3);
-
-
-        achivements.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(MainMenu.this, Missions.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
-
-
-        Achivements.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(MainMenu.this, Missions.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
-
-
-
-    }
-
-
-
-}
+}}
