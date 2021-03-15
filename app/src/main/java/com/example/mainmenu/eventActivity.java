@@ -21,8 +21,8 @@ public class eventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event);
         recyclerPh=findViewById(R.id.recyclerPhoto);
 
-        myAdapterrecy myAdapt=new myAdapterrecy(images,this);
-        recyclerPh.setAdapter(myAdapt);
+       // myAdapterrecy myAdapt=new myAdapterrecy(images,this);
+        //recyclerPh.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         ScaleCenterItemManager scaleCenterItemManager= new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);
         recyclerPh.setLayoutManager(new LinearLayoutManager(this));

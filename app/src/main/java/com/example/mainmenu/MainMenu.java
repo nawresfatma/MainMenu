@@ -33,8 +33,8 @@ public class MainMenu extends AppCompatActivity {
         s7=getResources().getStringArray(R.array.price);
 
 
-        myAdapterrecy myAdapt=new myAdapterrecy(this,s5,s6,s7,images);
-        recycler3.setAdapter(myAdapt);
+      //  myAdapterrecy myAdapt=new myAdapterrecy(this,s5,s6,s7,images);
+       // recycler3.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         ScaleCenterItemManager scaleCenterItemManager= new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);
         recycler3.setLayoutManager(new LinearLayoutManager(this));
