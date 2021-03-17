@@ -113,7 +113,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="By going to this event we asure you 2 thing that you will have fun and as a rewared we will give you some points that you can use later"
+                    android:text="By going to this com.example.mainmenu.event we asure you 2 thing that you will have fun and as a rewared we will give you some points that you can use later"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -134,7 +134,7 @@
                     android:id="@+id/textView19"
                     android:layout_width="312dp"
                     android:layout_height="54dp"
-                    android:text="By going to this event we asure you 2 thing that you will have fun and as a rewared we will give you some points that you can use later"
+                    android:text="By going to this com.example.mainmenu.event we asure you 2 thing that you will have fun and as a rewared we will give you some points that you can use later"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -208,7 +208,7 @@
             android:layout_height="200dp"
 
             android:layout_marginTop="4dp"
-            android:src="@drawable/event"
+            android:src="@drawable/eventone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MainMenu">
-        <activity android:name=".Ranking"></activity>
+        <activity android:name=".Ranking" />
         <activity android:name=".Profile" />
         <activity android:name=".Missions" />
         <activity android:name=".Store" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Menu">
+        <activity android:name=".Menu"/>
+        <activity android:name=".MainMenu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
