@@ -1,29 +1,52 @@
 package com.example.mainmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ranking extends AppCompatActivity {
-    TextView Back;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ranking);
-        Back=findViewById(R.id.Back);
+        RecyclerView recyclerView;
+
+        ArrayList<ListClassement> listClassement= new ArrayList<>();
+        CardAdapter adapter;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_ranking);
+            recyclerView=findViewById(R.id.recyclerView3);
+            listClassement.add(new ListClassement(1 , "fathi",1000 ,R.drawable.coin,R.drawable.iiimg));
+            listClassement.add(new ListClassement(2 , "mohssen",1000 ,R.drawable.coin,R.drawable.img));
+            listClassement.add(new ListClassement(3 , "nawres",7000 ,R.drawable.coin,R.drawable.iimg));
+            listClassement.add(new ListClassement(4 , "Samy",8000 ,R.drawable.coin,R.drawable.iimg));
+
+            adapter =new CardAdapter(listClassement, this);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(adapter);
 
 
 
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(Ranking.this, Menu.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
+        }
     }
-}
+
+
+
+
+
+
+
+  
