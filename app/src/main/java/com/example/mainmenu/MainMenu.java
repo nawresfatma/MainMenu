@@ -15,26 +15,22 @@ public class MainMenu extends AppCompatActivity {
 
     RecyclerView recycler3;
     private SnapHelper snapHelper;
-    String s5[] , s6[],s7[];
-    int images[]={R.drawable.event,R.drawable.shop};
+    List<event> eventList1=new ArrayList<>();
 
 
+    event e=new event("festival des arts des lumieres","elMedina","free",R.drawable.eventone);
+    event e1=new event("Launch Bassamet","ElMrabet","15dt",R.drawable.photoone);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-
         recycler3=findViewById(R.id.recyclerView);
 
+       eventList1.add(e);
+       eventList1.add(e1);
 
-        s5=getResources().getStringArray(R.array.event);
-        s6=getResources().getStringArray(R.array.location);
-        s7=getResources().getStringArray(R.array.price);
-
-
-      //  myAdapterrecy myAdapt=new myAdapterrecy(this,s5,s6,s7,images);
-       // recycler3.setAdapter(myAdapt);
+        myAdapter myAdapt=new myAdapter(eventList1,this);
+        recycler3.setAdapter(myAdapt);
         snapHelper = new LinearSnapHelper();
         ScaleCenterItemManager scaleCenterItemManager= new ScaleCenterItemManager(this, LinearLayoutManager.HORIZONTAL,false);
         recycler3.setLayoutManager(new LinearLayoutManager(this));
