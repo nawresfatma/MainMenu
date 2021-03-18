@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".eventActivity">
+    android:layout_height="wrap_content"
+    tools:context=".eventActivity"
+
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,13 +21,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline2"
-            app:shape_roundRect_topLeftRadius="14dp"
-            app:shape_roundRect_topRightRadius="14dp">
+            app:shape_roundRect_topLeftRadius="30dp"
+            app:shape_roundRect_topRightRadius="30dp" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="#FFFF">
 
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerProgram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/day2" />
 
                 <Button
                     android:id="@+id/day1"
@@ -36,6 +48,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recyclerPhoto" />
 
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="152dp"
+                    android:layout_height="267dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView17"
+                    app:layout_constraintTop_toTopOf="@+id/textView16"
+                    app:srcCompat="@drawable/woman" />
+
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
@@ -45,7 +66,7 @@
                     android:layout_marginTop="24dp"
                     android:text="Missions?"
                     android:textColor="#F48A69"
-                    android:textSize="24sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -122,13 +143,12 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
                     android:text="Description"
                     android:textColor="#E47C5B"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/textView17"
-                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
                 <TextView
                     android:id="@+id/textView19"
@@ -148,7 +168,10 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/cust"
 
-                    android:padding="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
                     android:text="LEARN MORE"
                     android:textColor="#000000"
                     app:layout_constraintStart_toStartOf="@+id/textView17"
@@ -158,8 +181,10 @@
                     android:id="@+id/recyclerPhoto"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView21"
-                    tools:layout_editor_absoluteX="326dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
                 <TextView
                     android:id="@+id/textView21"
@@ -202,7 +227,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.github.florent37.shapeofview.shapes.RoundRectView>
 
-        <ImageView
+    <!--  <ImageView
             android:id="@+id/image_slider"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -212,7 +237,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+          android:scaleType="centerCrop"/>-->
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"

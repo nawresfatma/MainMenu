@@ -1,3 +1,5 @@
+package com.example.mainmenu;
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,15 +9,17 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.mainmenu.R;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
 public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder> {
-    int images[];
+    ArrayList<Integer> images;
     Context context;
 
-    public adapterPhoto(int img[], Context context) {
+    public adapterPhoto(ArrayList img, Context context) {
         images = img;
         this.context = context;
     }
@@ -24,7 +28,7 @@ public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder
     @Override
     public adapterPhoto.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.item_menu, parent, false);
+        View view = inflater.inflate(R.layout.activity_photo_item, parent, false);
         return new adapterPhoto.MyViewHolder(view);
     }
 
@@ -32,7 +36,7 @@ public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder
     public void onBindViewHolder(@NonNull adapterPhoto.MyViewHolder holder, int position) {
         try {
 
-            holder.myImage3.setImageResource(images[position]);
+            holder.myImage3.setImageResource(images.get(position));
         } catch (NullPointerException e) {
             Log.e(TAG, "onBindViewHolder: Null Pointer: " + e.getMessage());
         }
@@ -41,14 +45,14 @@ public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder
     @Override
     public int getItemCount() {
         {
-            return images.length;
+            return images.size();
         }
 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView myImage3;
-        ConstraintLayout mainLayout;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

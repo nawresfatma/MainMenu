@@ -1,6 +1,7 @@
  package com.example.mainmenu;
 
 import android.content.Context;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,15 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
+
     private List<event> eventList;
    private  Context context;
 
 
+
     public myAdapter(List<event> eventList, Context context) {
+
         this.eventList = eventList;
         this.context = context;
     }
@@ -31,6 +37,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
        event event=eventList.get(position);
        holder.myText6.setText(event.getTitle());
        holder.myText7.setText(event.getLocation());
@@ -42,12 +49,16 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
     @Override
     public int getItemCount() {
 
-        return eventList.size();
+            return eventList.size();
+
     }
 
+
     public static class MyViewHolder extends RecyclerView.ViewHolder  {
+
         TextView myText6,myText7,myText8;
         ImageView myImage1;
+
 
 
         public MyViewHolder(@NonNull View itemView ) {
@@ -58,10 +69,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
             myText8=itemView.findViewById(R.id.price2);
             myImage1=itemView.findViewById(R.id.eventpic);
 
+
         }
-
-
     }
-
-
 }
