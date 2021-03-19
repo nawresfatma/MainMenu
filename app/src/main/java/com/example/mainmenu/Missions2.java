@@ -12,7 +12,7 @@ public class Missions2 extends AppCompatActivity {
     RecyclerView recyclerView;
 
     ArrayList<ListMissions> listMissions= new ArrayList<>();
-    MyAdapter adapter;
+    MissionAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Missions2 extends AppCompatActivity {
         listMissions.add(new ListMissions("torbet el bey","we are more than happy",R.drawable.cube,"DISCOVER"));
         listMissions.add(new ListMissions("dar ben gacem ","we are more than happy",R.drawable.man,"DISCOVER"));
         listMissions.add(new ListMissions("title 3","we are more than happy",R.drawable.cube,"DISCOVER"));
-        adapter =new MyAdapter(listMissions, this);
+        adapter =new MissionAdapter(listMissions, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
