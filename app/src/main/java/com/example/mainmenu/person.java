@@ -1,25 +1,21 @@
 package com.example.mainmenu;
 
-import androidx.annotation.NonNull;
-
 import java.util.Comparator;
 
-public class ListClassement {
+public class person implements Comparable<person> {
     private int rank;
     private String name;
-    private int points;
+    private String points;
     private int coin;
     private int profile;
 
-    public ListClassement(int rank, String name, int points, int coin, int profile) {
+    public person(int rank, String name, String points, int coin, int profile) {
         this.rank = rank;
         this.name = name;
         this.points = points;
         this.coin = coin;
         this.profile = profile;
     }
-
-
 
     public int getRank() {
         return rank;
@@ -37,11 +33,11 @@ public class ListClassement {
         this.name = name;
     }
 
-    public int getPoints() {
+    public String getPoints() {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(String points) {
         this.points = points;
     }
 
@@ -62,6 +58,8 @@ public class ListClassement {
     }
 
 
+    @Override
+    public int compareTo(person other) {
+        return this.points.compareTo(other.points);
+    }
 }
-
-

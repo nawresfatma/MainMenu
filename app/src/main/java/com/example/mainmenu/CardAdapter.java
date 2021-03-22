@@ -32,9 +32,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull CardAdapter.ViewHolder holder, int position) {
         ListClassement listClassement=ListClassement.get(position);
-        holder.rank.setText(listClassement.getRank());
+        holder.rank.setText(String.valueOf(listClassement.getRank()));
         holder.name.setText(listClassement.getName());
-        holder.points.setText(listClassement.getPoints());
+        holder.points.setText(String.valueOf(listClassement.getPoints()));
         holder.coin.setImageResource(listClassement.getCoin());
         holder.profile.setImageResource(listClassement.getProfile());
 

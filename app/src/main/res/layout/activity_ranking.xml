@@ -73,20 +73,6 @@
             app:srcCompat="@drawable/img" />
 
         <ImageView
-            android:id="@+id/imageView46"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="380dp"
-            android:layout_marginRight="380dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView34"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView48"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/b" />
-
-        <ImageView
             android:id="@+id/imageView47"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,12 +118,28 @@
             android:id="@+id/imageView56"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="244dp"
+            android:layout_marginTop="210dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView45"
             app:srcCompat="@drawable/trace" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="View Your Rank"
+            android:textColor="#EB9069"
+
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
         <TextView
             android:id="@+id/textView33"
@@ -171,7 +173,7 @@
             android:text="Name"
             app:layout_constraintBottom_toBottomOf="@+id/imageView56"
             app:layout_constraintEnd_toStartOf="@+id/textView33"
-            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toEndOf="@+id/textView35" />
 
         <ImageView
@@ -264,11 +266,13 @@
             android:id="@+id/recyclerView3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView56"
-            tools:listitem="@layout/card"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView54"
+            tools:listitem="@layout/card" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

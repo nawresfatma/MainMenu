@@ -22,8 +22,8 @@ public class Profile extends AppCompatActivity {
         Viewmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(Profile.this, Missions2.class);
-                startActivity(intentLoadNewActivity);
+                Intent intent = new Intent(Profile.this,missionf.class);
+                startActivity(intent);
             }
         });
 

@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MissionAdapter extends RecyclerView.Adapter<MissionAdapter.ViewHolder> {
-    private List<ListMissions> ListMissions;
-    private Context context;
+    public List<ListMissions> ListMissions;
+    public Context context;
 
 
     public MissionAdapter(ArrayList<com.example.mainmenu.ListMissions> listMissions , Context context) {
