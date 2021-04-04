@@ -11,15 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
+
     private List<ListClassement> ListClassement;
     private Context context;
+
 
     public CardAdapter(List<com.example.mainmenu.ListClassement> listClassement, Context context) {
         ListClassement = listClassement;
         this.context = context;
+
     }
 
     @NonNull
@@ -38,6 +43,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         holder.coin.setImageResource(listClassement.getCoin());
         holder.profile.setImageResource(listClassement.getProfile());
 
+
+
     }
 
 
@@ -53,6 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         public TextView points ;
         public ImageView coin;
         public ImageView profile;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

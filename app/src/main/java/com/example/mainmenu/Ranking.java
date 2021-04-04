@@ -13,8 +13,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,10 +27,11 @@ import java.util.List;
 import static java.util.Collections.*;
 
 public class Ranking extends AppCompatActivity {
-
+    private TextView First, Second, Third;
+    private ImageView FirstI, SecondI, ThirdI;
     RecyclerView recyclerView;
 
-    ArrayList<ListClassement> listClassement = new ArrayList<>();
+    static ArrayList<ListClassement> listClassement = new ArrayList<>();
     CardAdapter adapter;
 
 
@@ -38,7 +42,9 @@ public class Ranking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
         recyclerView = findViewById(R.id.recyclerView3);
-
+        First=findViewById(R.id.FirstplaceName);
+        Second=findViewById(R.id.SecondplaceName);
+        Third=findViewById(R.id.ThirdplaceName);
 
         listClassement.add(new ListClassement(1, "fathi", 8000, R.drawable.coin, R.drawable.cube));
         listClassement.add(new ListClassement(2, "mohssen", 1000, R.drawable.coin, R.drawable.img));
@@ -46,14 +52,26 @@ public class Ranking extends AppCompatActivity {
         listClassement.add(new ListClassement(4, "Samy", 8000, R.drawable.coin, R.drawable.iimg));
         adapter = new CardAdapter(listClassement, this);
 
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        //tableau fih les elements lkol me ghir rank baaed taaamel l add ou rank kol mara ikadem
 
+        First.setText(listClassement.get(0).getName());
+        Second.setText(listClassement.get(1).getName());
+        Third.setText(listClassement.get(2).getName());
+       // FirstI.setImageResource(listClassement.get(0).getProfile());
+       // SecondI.setImageResource(listClassement.get(1).getProfile());
+        //ThirdI.setImageResource(listClassement.get(2).getProfile());
+
+         for(int j = 0 ; j < 3 ; j++)
+         {
+           listClassement.remove(0);
+        }
+        }
 
 
     }
 
 
-}
+

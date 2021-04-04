@@ -39,38 +39,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView43"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="188dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/SecondplaceImg"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="148dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView56"
-            app:layout_constraintEnd_toStartOf="@+id/imageView45"
+            app:layout_constraintEnd_toStartOf="@+id/FirstplaceImg"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/iiimg" />
+            app:srcCompat="@drawable/img">
 
-        <ImageView
-            android:id="@+id/imageView44"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="180dp"
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ThirdplaceImg"
+            android:layout_width="84dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="140dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView34"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView45"
-            app:srcCompat="@drawable/iimg" />
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintStart_toEndOf="@+id/FirstplaceImg"
+            app:srcCompat="@drawable/img">
 
-        <ImageView
-            android:id="@+id/imageView45"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/FirstplaceImg"
+            android:layout_width="81dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="44dp"
             android:foregroundGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView32"
-            app:srcCompat="@drawable/img" />
+            app:srcCompat="@drawable/img">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
 
         <ImageView
             android:id="@+id/imageView47"
@@ -110,7 +123,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView34"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView44"
+            app:layout_constraintTop_toBottomOf="@+id/ThirdplaceImg"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/bn" />
 
@@ -122,7 +135,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView45"
+            app:layout_constraintTop_toBottomOf="@+id/FirstplaceImg"
             app:srcCompat="@drawable/trace" />
 
         <TextView
@@ -191,15 +204,15 @@
             app:srcCompat="@drawable/back" />
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/SecondplaceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView43"
+            app:layout_constraintEnd_toEndOf="@+id/SecondplaceImg"
             app:layout_constraintHorizontal_bias="0.527"
-            app:layout_constraintStart_toStartOf="@+id/imageView43"
-            app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+            app:layout_constraintStart_toStartOf="@+id/SecondplaceImg"
+            app:layout_constraintTop_toBottomOf="@+id/SecondplaceImg" />
 
         <TextView
             android:id="@+id/textView41"
@@ -210,20 +223,20 @@
             android:textColor="#33D085"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView42"
+            app:layout_constraintEnd_toEndOf="@+id/SecondplaceName"
             app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toStartOf="@+id/textView42"
-            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+            app:layout_constraintStart_toStartOf="@+id/SecondplaceName"
+            app:layout_constraintTop_toBottomOf="@+id/SecondplaceName" />
 
         <TextView
-            android:id="@+id/textView40"
+            android:id="@+id/ThirdplaceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView44"
-            app:layout_constraintStart_toStartOf="@+id/imageView44"
-            app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+            app:layout_constraintEnd_toEndOf="@+id/ThirdplaceImg"
+            app:layout_constraintStart_toStartOf="@+id/ThirdplaceImg"
+            app:layout_constraintTop_toBottomOf="@+id/ThirdplaceImg" />
 
         <TextView
             android:id="@+id/textView49"
@@ -234,20 +247,21 @@
             android:textColor="#3391D0"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView40"
+            app:layout_constraintEnd_toEndOf="@+id/ThirdplaceName"
             app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="@+id/textView40"
-            app:layout_constraintTop_toBottomOf="@+id/textView40" />
+            app:layout_constraintStart_toStartOf="@+id/ThirdplaceName"
+            app:layout_constraintTop_toBottomOf="@+id/ThirdplaceName" />
 
         <TextView
-            android:id="@+id/textView39"
+            android:id="@+id/FirstplaceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView45"
-            app:layout_constraintStart_toStartOf="@+id/imageView45"
-            app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+            app:layout_constraintEnd_toEndOf="@+id/FirstplaceImg"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="@+id/FirstplaceImg"
+            app:layout_constraintTop_toBottomOf="@+id/FirstplaceImg" />
 
         <TextView
             android:id="@+id/textView43"
@@ -258,9 +272,9 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#EB9069"
-            app:layout_constraintEnd_toEndOf="@+id/textView39"
-            app:layout_constraintStart_toStartOf="@+id/textView39"
-            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+            app:layout_constraintEnd_toEndOf="@+id/FirstplaceName"
+            app:layout_constraintStart_toStartOf="@+id/FirstplaceName"
+            app:layout_constraintTop_toBottomOf="@+id/FirstplaceName" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView3"

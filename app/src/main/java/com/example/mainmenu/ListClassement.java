@@ -1,15 +1,12 @@
 package com.example.mainmenu;
 
-import androidx.annotation.NonNull;
-
-import java.util.Comparator;
-
 public class ListClassement {
     private int rank;
     private String name;
     private int points;
     private int coin;
     private int profile;
+
 
     public ListClassement(int rank, String name, int points, int coin, int profile) {
         this.rank = rank;
@@ -18,8 +15,6 @@ public class ListClassement {
         this.coin = coin;
         this.profile = profile;
     }
-
-
 
     public int getRank() {
         return rank;
