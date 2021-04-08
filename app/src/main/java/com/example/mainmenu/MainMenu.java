@@ -18,8 +18,8 @@ public class MainMenu extends AppCompatActivity {
     List<event> eventList1=new ArrayList<>();
 
 
-    event e=new event("festival des arts des lumieres","elMedina","free",R.drawable.eventone);
-    event e1=new event("Launch Bassamet","ElMrabet","15dt",R.drawable.photoone);
+    event e=new event("festival des arts des lumieres","Medina","free",R.drawable.eventone);
+    event e1=new event("Launch Bassamet","ElMrabet","15dt",R.drawable.mrabett);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

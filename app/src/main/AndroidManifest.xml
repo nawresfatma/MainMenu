@@ -16,7 +16,7 @@
         <activity android:name=".Missions" />
         <activity android:name=".Store" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Menu">
+        <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

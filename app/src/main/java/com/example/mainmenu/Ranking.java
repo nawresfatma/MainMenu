@@ -42,14 +42,15 @@ public class Ranking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
         recyclerView = findViewById(R.id.recyclerView3);
-        First=findViewById(R.id.FirstplaceName);
-        Second=findViewById(R.id.SecondplaceName);
-        Third=findViewById(R.id.ThirdplaceName);
+        First = findViewById(R.id.FirstplaceName);
+        Second = findViewById(R.id.SecondplaceName);
+        Third = findViewById(R.id.ThirdplaceName);
 
         listClassement.add(new ListClassement(1, "fathi", 8000, R.drawable.coin, R.drawable.cube));
-        listClassement.add(new ListClassement(2, "mohssen", 1000, R.drawable.coin, R.drawable.img));
+        listClassement.add(new ListClassement(2, "mohssen", 10000, R.drawable.coin, R.drawable.img));
         listClassement.add(new ListClassement(3, "nawres", 7000, R.drawable.coin, R.drawable.iimg));
         listClassement.add(new ListClassement(4, "Samy", 8000, R.drawable.coin, R.drawable.iimg));
+       // Collections.sort(listClassement, new ComparatorList());
         adapter = new CardAdapter(listClassement, this);
 
 
@@ -57,21 +58,32 @@ public class Ranking extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
+
+
+
         First.setText(listClassement.get(0).getName());
         Second.setText(listClassement.get(1).getName());
         Third.setText(listClassement.get(2).getName());
-       // FirstI.setImageResource(listClassement.get(0).getProfile());
-       // SecondI.setImageResource(listClassement.get(1).getProfile());
+        // FirstI.setImageResource(listClassement.get(0).getProfile());
+        // SecondI.setImageResource(listClassement.get(1).getProfile());
         //ThirdI.setImageResource(listClassement.get(2).getProfile());
 
-         for(int j = 0 ; j < 3 ; j++)
-         {
-           listClassement.remove(0);
-        }
+        for (int j = 0; j < 3; j++) {
+            listClassement.remove(0);
         }
 
+//TODO fonction mtaa les points
 
     }
 
+   // private class ComparatorList implements Comparator<ListClassement>{
+
+        //@Override
+     //   public int compare(ListClassement o1, ListClassement o2) {
+           // o1.getPoints;
+       // }
+
+
+}
 
 
