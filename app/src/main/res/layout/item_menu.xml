@@ -3,11 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="280dp"
+    android:layout_height="230dp"
+    android:layout_marginRight="1dp"
+    android:paddingRight="1dp">
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +36,6 @@
         app:shape_roundRect_topRightRadius="10dp">
 
 
-
         <ImageView
             android:id="@+id/eventpic"
             android:layout_width="match_parent"
@@ -47,13 +48,13 @@
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/shadow" />
 
         <TextView
-            android:id="@+id/location"
+            android:id="@+id/eventlocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -65,6 +66,14 @@
             app:layout_constraintEnd_toStartOf="@+id/eventpic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventpic" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/heartt" />
 
         <ImageView
             android:id="@+id/imageView14"
@@ -91,7 +100,7 @@
         app:srcCompat="@drawable/geld" />
 
     <TextView
-        android:id="@+id/price2"
+        android:id="@+id/eventPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -105,22 +114,20 @@
         app:layout_constraintTop_toBottomOf="@+id/roundRectView2"
         app:layout_constraintVertical_bias="0.7" />
 
+
     <TextView
         android:id="@+id/eventname"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="10dp"
-        android:text="TextView"
-        android:textSize="18dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:text="EventName"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/imageView8"
-        app:layout_constraintHorizontal_bias="0.062"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/roundRectView2" />
+        app:layout_constraintTop_toBottomOf="@+id/roundRectView2"
+        app:layout_constraintVertical_bias="0.135" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

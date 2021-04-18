@@ -17,7 +17,7 @@ public class eventActivity extends AppCompatActivity {
     private SnapHelper snapHelper ,snapHelperProgram;
 
     List<programClass> programList=new ArrayList<>();
-    ArrayList<Integer> photos = new ArrayList<Integer>();
+    List<Integer> photos = new ArrayList<Integer>();
     programClass p=new programClass(R.drawable.youssef,"Opening speech","Ministre des affaires culturelles Mohamed Zinelabidine","Expert à l'Unesco et auteur de nombreuses publications scientifiques, il a dirigé les Instituts supérieurs de musique de Tunis et de Sousse","8:00");
     programClass p1=new programClass(R.drawable.youssef,"Opening speech","Ministre des affaires culturelles Mohamed Zinelabidine","Expert à l'Unesco et auteur de nombreuses publications scientifiques, il a dirigé les Instituts supérieurs de musique de Tunis et de Sousse","10:00");
 

@@ -10,15 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> {
 
-    private List<com.example.mainmenu.ListStore> ListStore;
-    private Context context;
+    List<ListStore> listStores;
+     Context context;
 
     public StoreAdapter(List<ListStore> listStore, Context context) {
-        ListStore = listStore;
+        this.listStores = listStore;
         this.context = context;
     }
 
@@ -31,30 +33,31 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull StoreAdapter.ViewHolder holder, int position) {
-        ListStore listStore=ListStore.get(position);
-        holder.title2.setText(listStore.getTitle2());
-        holder.price.setText(listStore.getPrice());
-        holder.Image1.setImageResource(listStore.getImage1());
+        ListStore l=listStores.get(position);
+        holder.prName.setText(l.getPrName());
+        holder.prprice.setText(l.getPrPrice());
+        //holder.imageStore.setImageResource(listStore.getImage1());
+        Picasso.get().load(listStores.get(position).getPrImg()).into(holder.prImg);
 
     }
 
     @Override
     public int getItemCount() {
-        return ListStore.size();
+        return listStores.size();
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView title2;
-            public TextView price;
-            public ImageView Image1;
+            public TextView prName;
+            public TextView prprice;
+            public ImageView prImg;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            Image1=(ImageView) itemView.findViewById(R.id.imagestore) ;
-            title2=(TextView) itemView.findViewById(R.id.title2);
-            price=(TextView) itemView.findViewById(R.id.price);
+            prImg= itemView.findViewById(R.id.imagestore) ;
+            prName= itemView.findViewById(R.id.title2);
+            prprice= itemView.findViewById(R.id.price);
 
         }
     }

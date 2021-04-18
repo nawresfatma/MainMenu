@@ -2,44 +2,50 @@ package com.example.mainmenu;
 
 public class event {
 
-private String title,location,price;
-private int img;
-    public event(String title, String location,String price,int img) {
-        this.title = title;
-        this.location = location;
-        this.price=price;
-        this.img=img;
+private String eventName,eventLocation,eventPrice;
+private String eventimg;
+
+    public event() {
     }
 
-    public String getTitle() {
-        return title;
+    public event(String eventName, String eventLocation, String eventPrice, String eventimg) {
+        this.eventName = eventName;
+        this.eventLocation = eventLocation;
+        this.eventPrice = eventPrice;
+        this.eventimg = eventimg;
     }
 
-    public String getLocation() {
-        return location;
+    public String getEventName() {
+        return eventName;
     }
 
-    public String getPrice() {
-        return price;
+    public String getEventLocation() {
+        return eventLocation;
     }
 
-    public int getImg() {
-        return img;
+    public void setEventLocation(String eventLocation) {
+        this.eventLocation = eventLocation;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getEventPrice() {
+        return eventPrice;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public String getEventimg() {
+        return eventimg;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
-    public void setImg(int img) {
-        this.img = img;
+
+
+    public void setEventPrice(String eventPrice) {
+        this.eventPrice = eventPrice;
+    }
+
+    public void setEventimg(String eventimg) {
+        this.eventimg = eventimg;
     }
 }

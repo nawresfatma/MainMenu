@@ -12,14 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
 public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder> {
-    ArrayList<Integer> images;
+    List<Integer> images=new ArrayList<>();
     Context context;
 
-    public adapterPhoto(ArrayList img, Context context) {
+    public adapterPhoto(List img, Context context) {
         images = img;
         this.context = context;
     }
@@ -35,7 +36,6 @@ public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull adapterPhoto.MyViewHolder holder, int position) {
         try {
-
             holder.myImage3.setImageResource(images.get(position));
         } catch (NullPointerException e) {
             Log.e(TAG, "onBindViewHolder: Null Pointer: " + e.getMessage());
@@ -44,11 +44,9 @@ public class adapterPhoto extends RecyclerView.Adapter<adapterPhoto.MyViewHolder
 
     @Override
     public int getItemCount() {
-        {
             return images.size();
-        }
-
     }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView myImage3;

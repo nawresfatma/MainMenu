@@ -2,37 +2,40 @@ package com.example.mainmenu;
 
 public class ListStore {
 
-    private String title2;
-    private int price ;
-    private int image1;
+    private String prName;
+    private String prPrice ;
+    private String prImg;
 
-    public ListStore(String title2, int price, int image) {
-        this.title2 = title2;
-        this.price = price;
-        this.image1 = image1;
+    public ListStore() {
     }
 
-    public String getTitle2() {
-        return title2;
+    public ListStore(String title2, String price, String  image1) {
+        this.prName = title2;
+        this.prPrice = price;
+        this.prImg = image1;
     }
 
-    public void setTitle2(String title2) {
-        this.title2 = title2;
+    public String getPrName() {
+        return prName;
     }
 
-    public int getPrice() {
-        return price;
+    public void setPrName(String prName) {
+        this.prName = prName;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getPrPrice() {
+        return prPrice;
     }
 
-    public int getImage1() {
-        return image1;
+    public void setPrPrice(String prPrice) {
+        this.prPrice = prPrice;
     }
 
-    public void setImage(int image) {
-        this.image1= image;
+    public String getPrImg() {
+        return prImg;
+    }
+
+    public void setPrImg(String prImg) {
+        this.prImg = prImg;
     }
 }

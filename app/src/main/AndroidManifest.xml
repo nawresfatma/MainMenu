@@ -14,9 +14,13 @@
         <activity android:name=".Ranking" />
         <activity android:name=".Profile" />
         <activity android:name=".Missions" />
-        <activity android:name=".Store" />
+
         <activity android:name=".MainActivity" />
-        <activity android:name=".MainMenu">
+<activity android:name=".Store"/>
+        <activity android:name=".eventActivity"/>
+
+
+    <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
