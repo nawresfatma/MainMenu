@@ -31,18 +31,16 @@ private String eventimg;
         return eventPrice;
     }
 
-    public String getEventimg() {
-        return eventimg;
-    }
-
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
 
-
-
     public void setEventPrice(String eventPrice) {
         this.eventPrice = eventPrice;
+    }
+
+    public String getEventimg() {
+        return eventimg;
     }
 
     public void setEventimg(String eventimg) {

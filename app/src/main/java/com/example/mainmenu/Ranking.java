@@ -30,6 +30,8 @@ public class Ranking extends AppCompatActivity {
     private TextView First, Second, Third;
     private ImageView FirstI, SecondI, ThirdI;
     RecyclerView recyclerView;
+    //intent backMenu
+ TextView backMenu;
 
     static ArrayList<ListClassement> listClassement = new ArrayList<>();
     CardAdapter adapter;
@@ -74,6 +76,16 @@ public class Ranking extends AppCompatActivity {
 
 //TODO fonction mtaa les points
 
+        //Intent back menu
+        backMenu=findViewById(R.id.Back);
+        backMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentLoadNewActivity = new Intent(Ranking.this, MainMenu.class);
+                startActivity(intentLoadNewActivity);
+            }
+        });
+
     }
 
    // private class ComparatorList implements Comparator<ListClassement>{
@@ -82,6 +94,8 @@ public class Ranking extends AppCompatActivity {
      //   public int compare(ListClassement o1, ListClassement o2) {
            // o1.getPoints;
        // }
+
+
 
 
 }
