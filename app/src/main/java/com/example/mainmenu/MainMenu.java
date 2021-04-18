@@ -33,7 +33,7 @@ public class MainMenu extends AppCompatActivity {
     //intents
     TextView missionBut , rankingbut,storebut;
 
-
+eee
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
