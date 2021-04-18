@@ -423,19 +423,15 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView24"
             app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent" />
+
         <ImageView
             android:id="@+id/imageView33"
             android:layout_width="26dp"
             android:layout_height="27dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="@+id/textView15"
-            app:layout_constraintHorizontal_bias="0.038"
-            app:layout_constraintStart_toStartOf="@+id/textView15"
-            app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.533"
-            app:srcCompat="@drawable/loop" />
+            app:layout_constraintEnd_toEndOf="@+id/missionBut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/loop"
+            tools:layout_editor_absoluteY="946dp" />
 
         <ImageView
         android:id="@+id/imageView26"
