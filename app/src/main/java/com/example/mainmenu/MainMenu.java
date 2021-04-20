@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.SnapHelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,13 +32,14 @@ public class MainMenu extends AppCompatActivity {
     //Firebase
     DatabaseReference eventReference;
     //intents
-    TextView missionBut , rankingbut,storebut;
+    ImageView market , map , missions;
 
-eee
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
 
         //Recycler event
         recycler3=findViewById(R.id.recyclerEvent);
@@ -70,29 +72,40 @@ eee
         });
 
         //INTENTS
-        missionBut=findViewById(R.id.missionBut);
-        rankingbut=findViewById(R.id.RankingBut);
-        storebut=findViewById(R.id.Store);
-        missionBut.setOnClickListener(new View.OnClickListener() {
+        market=findViewById(R.id.marketbut);
+        map=findViewById(R.id.mapbut);
+        missions=findViewById(R.id.missbut);
+ market.setOnClickListener(new View.OnClickListener() {
+     @Override
+     public void onClick(View v) {
+         Intent intentLoadNewActivity = new Intent(MainMenu.this,eventActivity.class);
+         //normalement bel market
+
+         startActivity(intentLoadNewActivity);
+
+     }
+ });
+
+ map.setOnClickListener(new View.OnClickListener() {
+     @Override
+     public void onClick(View v) {
+         Intent intentLoadNewActivity = new Intent(MainMenu.this, missionf.class);
+         //normalement bel map
+         startActivity(intentLoadNewActivity);
+
+     }
+ });
+
+missions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(MainMenu.this, missionf.class);
+                Intent intentLoadNewActivity = new Intent(MainMenu.this, Missions.class);
+                //normalement bel map
                 startActivity(intentLoadNewActivity);
+
             }
         });
-        storebut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(MainMenu.this, Store.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
-        rankingbut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadNewActivity = new Intent(MainMenu.this, Ranking.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
+
+
 
     }}

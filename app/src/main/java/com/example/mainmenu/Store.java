@@ -31,7 +31,7 @@ public class Store extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
         storeRecycler=findViewById(R.id.recyclerView5);
-        ee
+
 
        /*listStores.add(new ListStore("chachia" , "100" ,R.drawable.chachia));
         listStores.add(new ListStore("chachia" , "100" ,R.drawable.chachia));

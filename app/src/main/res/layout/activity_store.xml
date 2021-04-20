@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-eee
+
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="27dp"

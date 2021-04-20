@@ -53,7 +53,7 @@
             app:layout_constraintVertical_bias="0.185" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/missionsbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -78,7 +78,7 @@
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/missionsbut"
         app:srcCompat="@drawable/ligne" />
 
     <ImageView
@@ -110,7 +110,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/Rankingbut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -165,11 +165,11 @@
         android:layout_height="9dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintBottom_toBottomOf="@+id/Rankingbut"
+        app:layout_constraintEnd_toEndOf="@+id/Rankingbut"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView17"
-        app:layout_constraintTop_toTopOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/Rankingbut"
+        app:layout_constraintTop_toTopOf="@+id/Rankingbut"
         app:layout_constraintVertical_bias="0.529"
         app:srcCompat="@drawable/rocket" />
 
@@ -257,11 +257,11 @@
         android:layout_height="12dp"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView15"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintBottom_toBottomOf="@+id/missionsbut"
+        app:layout_constraintEnd_toEndOf="@+id/missionsbut"
         app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/missionsbut"
+        app:layout_constraintTop_toTopOf="@+id/missionsbut"
         app:layout_constraintVertical_bias="0.533"
         app:srcCompat="@drawable/loop" />
     </androidx.constraintlayout.widget.ConstraintLayout>

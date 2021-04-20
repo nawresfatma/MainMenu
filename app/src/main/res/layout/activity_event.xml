@@ -24,7 +24,8 @@
 
         <ImageView
             android:id="@+id/imageView19"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
+android:scaleType="fitXY"
             android:layout_height="589dp"
             android:layout_marginTop="150dp"
             android:foregroundGravity="center"
@@ -68,7 +69,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView7"
             app:layout_constraintHorizontal_bias="0.169"
             app:layout_constraintStart_toStartOf="@id/imageView19"
-            app:layout_constraintTop_toBottomOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/Rankingbut"
             app:srcCompat="@drawable/loopi" />
 
         <TextView
@@ -99,7 +100,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/missionsbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
@@ -114,7 +115,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/Rankingbut"
             android:layout_width="260dp"
             android:layout_height="132dp"
             android:layout_marginStart="8dp"
@@ -145,7 +146,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/textView19"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/Rankingbut"
             app:layout_constraintTop_toBottomOf="@+id/imageView21" />
 
         <TextView
@@ -178,14 +179,14 @@
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintTop_toBottomOf="@+id/missionsbut" />
 
         <ImageView
             android:id="@+id/imageView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintEnd_toStartOf="@+id/missionsbut"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             app:srcCompat="@drawable/pin" />
 
